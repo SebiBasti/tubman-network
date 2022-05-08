@@ -18,7 +18,7 @@ const languageMap = {
 const LanguageSelect = () => {
   let selected
   if (typeof window !== 'undefined') {
-    selected = localStorage.getItem("i18nextLng") || "en"
+    selected = localStorage.getItem("i18nextLng")
   } else {
     selected = "en"
   }
@@ -34,7 +34,7 @@ const LanguageSelect = () => {
   return (
     <div className="d-flex justify-content-end align-items-center language-select-root">
       <Button onClick={({ currentTarget }) => setMenuAnchor(currentTarget)}>
-        {typeof window !== 'undefined' ? languageMap[selected].label : ""}
+        {languageMap[selected].label}
         <ArrowDropDownIcon fontSize="small" />
       </Button>
       <Popover
