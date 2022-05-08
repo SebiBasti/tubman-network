@@ -34,7 +34,7 @@ const LanguageSelect = () => {
   return (
     <div className="d-flex justify-content-end align-items-center language-select-root">
       <Button onClick={({ currentTarget }) => setMenuAnchor(currentTarget)}>
-        {languageMap[selected].label || "none"}
+        {/*{languageMap[selected].label || "none"}*/}
         <ArrowDropDownIcon fontSize="small" />
       </Button>
       <Popover
