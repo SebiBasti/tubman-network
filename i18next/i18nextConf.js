@@ -7,10 +7,13 @@ import translationAR from "../public/assets/locales/ar/translation.json";
 import translationFR from "../public/assets/locales/fr/translation.json";
 
 const fallbackLng = ['en'];
-const availableLanguages = ['en', 'ar', 'fr'];
+const availableLanguages = ['en', 'en-GB', 'ar', 'fr'];
 
 const resources = {
   en: {
+    translation: translationEN
+  },
+  enGB: {
     translation: translationEN
   },
   ar: {

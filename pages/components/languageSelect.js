@@ -9,32 +9,36 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListSubheader from "@mui/material/ListSubheader";
 
-const languageMap = {
-  en: { label: "English", dir: "ltr", active: true },
-  ar: { label: "العربية", dir: "rtl", active: false },
-  fr: { label: "Français", dir: "ltr", active: false }
-};
-
 const LanguageSelect = () => {
-  let selected
+  const languageMap = {
+    en: { label: "English", dir: "ltr", active: true },
+    "en-GB": { label: "English", dir: "ltr", active: true },
+    ar: { label: "العربية", dir: "rtl", active: false },
+    fr: { label: "Français", dir: "ltr", active: false }
+  };
+  window.languageMap = languageMap;
+
+  var selected
   if (typeof window !== 'undefined') {
     selected = localStorage.getItem("i18nextLng")
+    window.selected = localStorage.getItem("i18nextLng")
   } else {
     selected = "en"
+    window.selected = "en"
   }
 
   const { t } = useTranslation();
 
   const [menuAnchor, setMenuAnchor] = React.useState(null);
   React.useEffect(() => {
-    document.body.dir = languageMap[selected].dir;
+    document.body.dir = languageMap[`${selected}`].dir || window.languageMap[selected].dir;
   }, [menuAnchor, selected]);
 
 
   return (
     <div className="d-flex justify-content-end align-items-center language-select-root">
       <Button onClick={({ currentTarget }) => setMenuAnchor(currentTarget)}>
-        {/*{languageMap[selected].label || "none"}*/}
+        {languageMap[selected].label || "none"}
         <ArrowDropDownIcon fontSize="small" />
       </Button>
       <Popover
