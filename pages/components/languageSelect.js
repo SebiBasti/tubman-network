@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 import i18next from "i18next";
 
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
@@ -16,55 +16,58 @@ const languageMap = {
 };
 
 const LanguageSelect = () => {
+  let item
   if (typeof window !== 'undefined') {
     const selected = localStorage.getItem("i18nextLng") || "en";
+    const { t } = useTranslation();
+
+    const [menuAnchor, setMenuAnchor] = React.useState(null);
+    React.useEffect(() => {
+      document.body.dir = languageMap[selected].dir;
+    }, [menuAnchor, selected]);
+
+    item = (
+      <div className="d-flex justify-content-end align-items-center language-select-root">
+        <Button onClick={({ currentTarget }) => setMenuAnchor(currentTarget)}>
+          {languageMap[selected].label}
+          <ArrowDropDownIcon fontSize="small" />
+        </Button>
+        <Popover
+          open={!!menuAnchor}
+          anchorEl={menuAnchor}
+          onClose={() => setMenuAnchor(null)}
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "right"
+          }}
+          transformOrigin={{
+            vertical: "top",
+            horizontal: "right"
+          }}
+        >
+          <div>
+            <List>
+              <ListSubheader>{t("select_language")}</ListSubheader>
+              {Object.keys(languageMap)?.map(item => (
+                <ListItem
+                  button
+                  key={item}
+                  onClick={() => {
+                    i18next.changeLanguage(item);
+                    setMenuAnchor(null);
+                  }}
+                >
+                  {languageMap[item].label}
+                </ListItem>
+              ))}
+            </List>
+          </div>
+        </Popover>
+      </div>
+    )
   }
-  const { t } = useTranslation();
 
-  const [menuAnchor, setMenuAnchor] = React.useState(null);
-  React.useEffect(() => {
-    document.body.dir = languageMap[selected].dir;
-  }, [menuAnchor, selected]);
-
-  return (
-    <div className="d-flex justify-content-end align-items-center language-select-root">
-      <Button onClick={({ currentTarget }) => setMenuAnchor(currentTarget)}>
-        {languageMap[selected].label}
-        <ArrowDropDownIcon fontSize="small" />
-      </Button>
-      <Popover
-        open={!!menuAnchor}
-        anchorEl={menuAnchor}
-        onClose={() => setMenuAnchor(null)}
-        anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "right"
-        }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "right"
-        }}
-      >
-        <div>
-          <List>
-            <ListSubheader>{t("select_language")}</ListSubheader>
-            {Object.keys(languageMap)?.map(item => (
-              <ListItem
-                button
-                key={item}
-                onClick={() => {
-                  i18next.changeLanguage(item);
-                  setMenuAnchor(null);
-                }}
-              >
-                {languageMap[item].label}
-              </ListItem>
-            ))}
-          </List>
-        </div>
-      </Popover>
-    </div>
-  );
+  return (typeof window !== 'undefined' ? item : null);
 };
 
 export default LanguageSelect;
