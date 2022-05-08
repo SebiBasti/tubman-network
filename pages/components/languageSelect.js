@@ -20,7 +20,7 @@ const LanguageSelect = () => {
   if (typeof window !== 'undefined') {
     selected = localStorage.getItem("i18nextLng") || "en"
   } else {
-    selected = ""
+    selected = "en"
   }
 
   const { t } = useTranslation();
