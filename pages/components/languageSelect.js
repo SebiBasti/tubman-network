@@ -16,7 +16,6 @@ const LanguageSelect = () => {
     ar: { label: "العربية", dir: "rtl", active: false },
     fr: { label: "Français", dir: "ltr", active: false }
   };
-  window.languageMap = languageMap;
 
   var selected
   if (typeof window !== 'undefined') {
