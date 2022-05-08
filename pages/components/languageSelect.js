@@ -21,24 +21,22 @@ const LanguageSelect = () => {
   var selected
   if (typeof window !== 'undefined') {
     selected = localStorage.getItem("i18nextLng")
-    window.selected = localStorage.getItem("i18nextLng")
   } else {
     selected = "en"
-    window.selected = "en"
   }
 
   const { t } = useTranslation();
 
   const [menuAnchor, setMenuAnchor] = React.useState(null);
   React.useEffect(() => {
-    document.body.dir = languageMap[`${selected}`].dir || window.languageMap[selected].dir;
+    document.body.dir = languageMap[`${selected}`].dir;
   }, [menuAnchor, selected]);
 
 
   return (
     <div className="d-flex justify-content-end align-items-center language-select-root">
       <Button onClick={({ currentTarget }) => setMenuAnchor(currentTarget)}>
-        {languageMap[selected].label || "none"}
+        {languageMap[selected].label}
         <ArrowDropDownIcon fontSize="small" />
       </Button>
       <Popover
