@@ -2,26 +2,39 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import Backend from 'i18next-xhr-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
+import translationDE from "../public/assets/locales/de/translation.json";
 import translationEN from "../public/assets/locales/en/translation.json";
-import translationAR from "../public/assets/locales/ar/translation.json";
+import translationUA from "../public/assets/locales/ua/translation.json";
+import translationRU from "../public/assets/locales/ru/translation.json";
+import translationSW from "../public/assets/locales/sw/translation.json";
 import translationFR from "../public/assets/locales/fr/translation.json";
+import translationPT from "../public/assets/locales/pt/translation.json";
 
 const fallbackLng = ['en'];
-const availableLanguages = ['en', 'en-GB', 'ar', 'fr'];
+const availableLanguages = ['de', 'en', 'ua', 'ru', 'sw', 'fr', 'pt'];
 
 const resources = {
+  de: {
+    translation: translationDE
+  },
   en: {
     translation: translationEN
   },
-  enGB: {
-    translation: translationEN
+  ua: {
+    translation: translationUA
   },
-  ar: {
-    translation: translationAR
+  ru: {
+    translation: translationRU
+  },
+  sw: {
+    translation: translationSW
   },
   fr: {
     translation: translationFR
-  }
+  },
+  pt: {
+    translation: translationPT
+  },
 };
 
 i18n

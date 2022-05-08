@@ -1,5 +1,5 @@
 import React from "react";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
@@ -11,18 +11,18 @@ import ListSubheader from "@mui/material/ListSubheader";
 
 const LanguageSelect = () => {
   const languageMap = {
-    en: { label: "English", dir: "ltr", active: true },
-    // "en-GB": { label: "English", dir: "ltr", active: true },
-    ar: { label: "العربية", dir: "rtl", active: false },
-    fr: { label: "Français", dir: "ltr", active: false }
+    de: { label: "Deutsch", dir: "ltr", active: true},
+    en: { label: "English", dir: "ltr", active: false },
+    ua: { label: "український", dir: "ltr", active: false },
+    ru: { label: "Русский", dir: "ltr", active: false },
+    sw: { label: "kiswahili", dir: "ltr", active: false},
+    fr: { label: "Français", dir: "ltr", active: false},
+    pt: { label: "Portugais", dir: "ltr", active: false}
   };
 
-  var selected
-  if (typeof window !== 'undefined' && languageMap[localStorage.getItem("i18nextLng")]) {
-    selected = localStorage.getItem("i18nextLng")
-  } else {
-    selected = "en"
-  }
+  const selected = (typeof window !== 'undefined' && languageMap[localStorage.getItem("i18nextLng")]) ?
+      localStorage.getItem("i18nextLng") :
+      "en"
 
   const { t } = useTranslation();
 
