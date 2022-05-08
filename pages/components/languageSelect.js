@@ -12,13 +12,13 @@ import ListSubheader from "@mui/material/ListSubheader";
 const LanguageSelect = () => {
   const languageMap = {
     en: { label: "English", dir: "ltr", active: true },
-    "en-GB": { label: "English", dir: "ltr", active: true },
+    // "en-GB": { label: "English", dir: "ltr", active: true },
     ar: { label: "العربية", dir: "rtl", active: false },
     fr: { label: "Français", dir: "ltr", active: false }
   };
 
   var selected
-  if (typeof window !== 'undefined') {
+  if (typeof window !== 'undefined' && languageMap[localStorage.getItem("i18nextLng")]) {
     selected = localStorage.getItem("i18nextLng")
   } else {
     selected = "en"
