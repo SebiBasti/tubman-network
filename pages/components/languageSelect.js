@@ -11,13 +11,13 @@ import ListSubheader from "@mui/material/ListSubheader";
 
 const LanguageSelect = () => {
   const languageMap = {
-    de: { label: "Deutsch", dir: "ltr", active: true},
-    en: { label: "English", dir: "ltr", active: false },
-    ua: { label: "український", dir: "ltr", active: false },
-    ru: { label: "Русский", dir: "ltr", active: false },
+    de: { label: "🇩🇪 Deutsch", dir: "ltr", active: true},
+    en: { label: "🇬🇧 English", dir: "ltr", active: false },
+    ua: { label: "🇺🇦 український", dir: "ltr", active: false },
+    ru: { label: "🇷🇺 Русский", dir: "ltr", active: false },
     sw: { label: "kiswahili", dir: "ltr", active: false},
-    fr: { label: "Français", dir: "ltr", active: false},
-    pt: { label: "Portugais", dir: "ltr", active: false}
+    fr: { label: "🇫🇷 Français", dir: "ltr", active: false},
+    pt: { label: "🇵🇹 Portugais", dir: "ltr", active: false}
   };
 
   const selected = (typeof window !== 'undefined' && languageMap[localStorage.getItem("i18nextLng")]) ?
@@ -28,12 +28,12 @@ const LanguageSelect = () => {
 
   const [menuAnchor, setMenuAnchor] = React.useState(null);
   React.useEffect(() => {
-    document.body.dir = languageMap[`${selected}`].dir;
+    document.body.dir = languageMap[selected].dir;
   }, [menuAnchor, selected]);
 
 
   return (
-    <div className="d-flex justify-content-end align-items-center language-select-root">
+    <div style={{display: "flex", justifyContent: "flex-end", alignItems: "center", height: "100%", marginLeft: "1rem"}}>
       <Button onClick={({ currentTarget }) => setMenuAnchor(currentTarget)}>
         {languageMap[selected].label}
         <ArrowDropDownIcon fontSize="small" />
