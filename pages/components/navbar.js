@@ -70,11 +70,13 @@ export default function Navbar() {
   return (
     <header className={navbar.container}>
       <input type="checkbox" id="nav-toggle" className={navbar.toggle}/>
+      <img src="/tubman_logo.png" alt=""/>
       <nav className={navbar.nav}>
         <ul>
           <li>
             <div>
               <Button
+                color="neutral"
                 id="about-us-button"
                 aria-controls={openAboutUs ? 'about-us-menu' : undefined}
                 aria-haspopup="true"
@@ -104,6 +106,7 @@ export default function Navbar() {
           <li>
             <div>
               <Button
+                color="neutral"
                 id="activities-button"
                 aria-controls={openActivities ? 'activities-menu' : undefined}
                 aria-haspopup="true"
@@ -140,6 +143,7 @@ export default function Navbar() {
           <li>
             <div>
               <Button
+                color="neutral"
                 id="locations-button"
                 aria-controls={openLocations ? 'locations-menu' : undefined}
                 aria-haspopup="true"
@@ -171,6 +175,7 @@ export default function Navbar() {
           <li>
             <div>
               <Button
+                color="neutral"
                 id="press-button"
                 aria-controls={openPress ? 'press-menu' : undefined}
                 aria-haspopup="true"
@@ -196,6 +201,7 @@ export default function Navbar() {
           <li>
             <div>
               <Button
+                color="neutral"
                 id="news-button"
                 aria-controls={openNews ? 'news-menu' : undefined}
                 aria-haspopup="true"
@@ -221,6 +227,7 @@ export default function Navbar() {
           <li>
             <div>
               <Button
+                color="neutral"
                 id="archive-button"
                 aria-controls={openArchive ? 'archive-menu' : undefined}
                 aria-haspopup="true"

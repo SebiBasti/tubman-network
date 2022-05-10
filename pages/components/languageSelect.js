@@ -31,10 +31,9 @@ const LanguageSelect = () => {
     document.body.dir = languageMap[selected].dir;
   }, [menuAnchor, selected]);
 
-
   return (
     <div style={{display: "flex", justifyContent: "flex-end", alignItems: "center", height: "100%", marginLeft: "1rem"}}>
-      <Button onClick={({ currentTarget }) => setMenuAnchor(currentTarget)}>
+      <Button color="neutral" onClick={({ currentTarget }) => setMenuAnchor(currentTarget)}>
         {languageMap[selected].label}
         <ArrowDropDownIcon fontSize="small" />
       </Button>

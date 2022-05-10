@@ -1,4 +1,8 @@
 {
+  "head": {
+    "title": "tubman network",
+    "description": "Every great dream begins with a dreamer."
+  },
   "title": "Hello, Welcome to React",
   "select_language": "Select a language"
 }
