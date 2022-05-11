@@ -32,8 +32,8 @@ const LanguageSelect = () => {
   }, [menuAnchor, selected]);
 
   return (
-    <div style={{display: "flex", justifyContent: "flex-end", alignItems: "center", height: "100%", marginLeft: "1rem"}}>
-      <Button color="neutral" onClick={({ currentTarget }) => setMenuAnchor(currentTarget)}>
+    <div style={{display: "flex", justifyContent: "flex-end", alignItems: "center", height: "100%", width: "160px", marginLeft: "1rem"}}>
+      <Button onClick={({ currentTarget }) => setMenuAnchor(currentTarget)}>
         {languageMap[selected].label}
         <ArrowDropDownIcon fontSize="small" />
       </Button>
