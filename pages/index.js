@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import { useTranslation } from "react-i18next";
 import Banner from "./components/banner"
+import CarouselHome from "./components/CarouselHome";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -14,6 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Banner/>
+      <CarouselHome/>
     </>
   )
 }
