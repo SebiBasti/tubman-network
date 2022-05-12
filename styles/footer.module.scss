@@ -1,0 +1,44 @@
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--light-blue);
+  color: var(--white);
+  padding: 1em max(calc((100vw - 1000px) / 2), 2em) 2em max(calc((100vw - 1000px) / 2), 2em);
+  border-top: 2px solid var(--grey);
+}
+
+.section {
+  width: max-content;
+}
+
+.section-content {
+}
+
+.section-row {
+  display: flex;
+  margin-top: .5em;
+
+  svg {
+    margin-right: .5em;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  &:hover {
+    p, svg {
+      color: var(--magenta);
+    }
+  }
+}
+
+.imprint {
+  text-align: center;
+  margin: 0;
+  background-color: var(--light-blue);
+  color: var(--white);
+  padding-bottom: 2em;
+  font-size: 12px;
+}
