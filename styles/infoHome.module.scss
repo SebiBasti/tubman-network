@@ -1,0 +1,31 @@
+.container {
+  position: relative;
+  max-width: min(1000px, calc(100vw - 4rem));
+  margin: 2em auto;
+  background-color: var(--super-light-grey);
+  padding: 2em 2em 4em 2em;
+  box-shadow: 1px 1px 4px var(--blue);
+}
+
+.header {
+  width: max-content;
+  color: var(--blue);
+  font-size: 30px;
+  margin-top: 0;
+
+  &:after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid var(--light-blue);
+  }
+}
+
+.content {
+
+}
+
+.link {
+  position: absolute;
+  right: 2em;
+  bottom: 2em;
+}

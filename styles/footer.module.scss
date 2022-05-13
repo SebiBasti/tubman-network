@@ -42,3 +42,14 @@
   padding-bottom: 2em;
   font-size: 12px;
 }
+
+@media screen and (max-width: 650px) {
+  .container {
+    display: block;
+  }
+
+  .section {
+    margin: 0 auto;
+    width: 240px;
+  }
+}
