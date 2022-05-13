@@ -8,26 +8,51 @@ import InstagramIcon from '@mui/icons-material/Instagram'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import TelegramIcon from '@mui/icons-material/Telegram'
 import Script from 'next/script'
+import 'mapbox-gl/dist/mapbox-gl.css'
+import mapboxgl from '!mapbox-gl'
+import { useEffect, useRef, useState } from "react"; // eslint-disable-line import/no-webpack-loader-syntax
+
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2ViaWJhc3RpIiwiYSI6ImNsMzRnaTlzYTAzbHAzam1xNjQ0czBwZHcifQ.mlpxyheaJvIuaQGFBr4PEg';
 
 export default function Footer() {
+  const mapContainer = useRef(null);
+  const map = useRef(null);
+  const [lng, setLng] = useState(13.4675671);
+  const [lat, setLat] = useState(52.4727998);
+  const [zoom, setZoom] = useState(12);
+
+  useEffect(() => {
+    if (map.current) return; // initialize map only once
+    map.current = new mapboxgl.Map({
+      container: mapContainer.current,
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [lng, lat],
+      zoom: zoom
+    });
+    const marker = new mapboxgl.Marker()
+      .setLngLat([13.4675671, 52.4727998])
+      .addTo(map.current);
+  });
+
+  useEffect(() => {
+    if (!map.current) return; // wait for map to initialize
+    map.current.on('move', () => {
+      setLng(map.current.getCenter().lng.toFixed(4));
+      setLat(map.current.getCenter().lat.toFixed(4));
+      setZoom(map.current.getZoom().toFixed(2));
+    });
+  });
 
   return (
     <footer>
       <div className={ footer.container }>
-        <div className={ footer.section }>
+        <div className={ footer['section-map'] }>
           <h3>Address</h3>
           <div className={ footer['section-content'] }>
             <p>Dammweg 216</p>
             <p>12057 Berlin</p>
             <br/>
-            <iframe scrolling="no" marginHeight="0" marginWidth="0" id="gmap_canvas"
-                    src="https://maps.google.com/maps?width=250&amp;height=250&amp;hl=en&amp;q=Dammweg%20216%20Berlin+(Tubman%20Network)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                    width="250" height="250" frameBorder="0"></iframe>
-            <Script type='text/javascript'
-                    id='my-script'
-                    src={`https://embedmaps.com/google-maps-authorization/script.js?id=deb4b60c96ed20218c721a3a185e56d4b1c07fc6`}>
-
-            </Script>
+            <div ref={mapContainer} className={ footer.map } />
           </div>
         </div>
         <div className={ footer.section }>
