@@ -80,7 +80,9 @@ export default function Navbar() {
     <ThemeProvider theme={theme}>
       <header className={navbar.container}>
         <input type="checkbox" id="nav-toggle" className={navbar.toggle}/>
-        <img src="/tubman_logo.png" alt=""/>
+        <Link href={"/"}>
+          <img src="/tubman_logo.png" alt=""/>
+        </Link>
         <nav className={navbar.nav}>
           <ul>
             <li>
