@@ -4,7 +4,7 @@
   justify-content: space-between;
   background-color: var(--light-blue);
   color: var(--white);
-  padding: 1em max(calc((100vw - 1000px) / 2), 2em) 2em max(calc((100vw - 1000px) / 2), 2em);
+  padding: 1em max(calc((100vw - 900px + 4em) / 2), 4em) 2em max(calc((100vw - 900px + 4em) / 2), 4em);
   border-top: 2px solid var(--grey);
 }
 
@@ -51,13 +51,13 @@
   font-size: 12px;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
   .container {
     display: block;
   }
 
   .section, .section-map {
-    margin: 0 auto;
+    margin: 2em auto;
     width: 240px;
   }
 }

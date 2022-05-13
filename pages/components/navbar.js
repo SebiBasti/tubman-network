@@ -103,12 +103,12 @@ export default function Navbar() {
                     'aria-labelledby': 'about-us-button',
                   }}
                 >
-                  <MenuItem onClick={handleAboutUsClose}>Constitution</MenuItem>
-                  <MenuItem onClick={handleAboutUsClose}>Partner</MenuItem>
-                  <MenuItem onClick={handleAboutUsClose}>Policies</MenuItem>
-                  <MenuItem onClick={handleAboutUsClose}>Procedures</MenuItem>
-                  <MenuItem onClick={handleAboutUsClose}>Structure</MenuItem>
-                  <MenuItem onClick={handleAboutUsClose}>Vorstand</MenuItem>
+                  <MenuItem onClick={handleAboutUsClose} disabled={ true }>Constitution</MenuItem>
+                  <MenuItem onClick={handleAboutUsClose} disabled={ true }>Partner</MenuItem>
+                  <MenuItem onClick={handleAboutUsClose} disabled={ true }>Policies</MenuItem>
+                  <MenuItem onClick={handleAboutUsClose} disabled={ true }>Procedures</MenuItem>
+                  <MenuItem onClick={handleAboutUsClose} disabled={ true }>Structure</MenuItem>
+                  <MenuItem onClick={handleAboutUsClose} disabled={ true }>Vorstand</MenuItem>
                 </Menu>
               </div>
             </li>
@@ -132,19 +132,19 @@ export default function Navbar() {
                     'aria-labelledby': 'activities-button',
                   }}
                 >
-                  <MenuItem onClick={handleActivitiesClose}>Accommodation services</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose}>Advice for Professionals</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose}>Advice for Students</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose}>Catering Services</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose}>Children and Family Support</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose}>CommUnity Events</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose}>German classes</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose}>Intake services</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose}>Legal Advice</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose}>Psychological Support</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose}>Services for Hosts</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose}>Training</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose}>Volunteers</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Accommodation services</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Advice for Professionals</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Advice for Students</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Catering Services</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Children and Family Support</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>CommUnity Events</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>German classes</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Intake services</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Legal Advice</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Psychological Support</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Services for Hosts</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Training</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Volunteers</MenuItem>
                 </Menu>
               </div>
             </li>
@@ -168,9 +168,9 @@ export default function Navbar() {
                     'aria-labelledby': 'locations-button',
                   }}
                 >
-                  <MenuItem onClick={handleLocationsClose}>Dammweg 216</MenuItem>
-                  <MenuItem onClick={handleLocationsClose}>Meeringdamm 20</MenuItem>
-                  <MenuItem onClick={handleLocationsClose}>Suggest new location</MenuItem>
+                  <MenuItem onClick={handleLocationsClose} disabled={ true }>Dammweg 216</MenuItem>
+                  <MenuItem onClick={handleLocationsClose} disabled={ true }>Meeringdamm 20</MenuItem>
+                  <MenuItem onClick={handleLocationsClose} disabled={ true }>Suggest new location</MenuItem>
                 </Menu>
               </div>
             </li>
@@ -199,8 +199,8 @@ export default function Navbar() {
                     'aria-labelledby': 'press-button',
                   }}
                 >
-                  <MenuItem onClick={handlePressClose}>press coverage</MenuItem>
-                  <MenuItem onClick={handlePressClose}>press contact</MenuItem>
+                  <MenuItem onClick={handlePressClose} disabled={ true }>press coverage</MenuItem>
+                  <MenuItem onClick={handlePressClose} disabled={ true }>press contact</MenuItem>
                 </Menu>
               </div>
             </li>
@@ -224,8 +224,8 @@ export default function Navbar() {
                     'aria-labelledby': 'news-button',
                   }}
                 >
-                  <MenuItem onClick={handleNewsClose}>News</MenuItem>
-                  <MenuItem onClick={handleNewsClose}>signup for our Newsletter</MenuItem>
+                  <MenuItem onClick={handleNewsClose} disabled={ true }>News</MenuItem>
+                  <MenuItem onClick={handleNewsClose} disabled={ true }>signup for our Newsletter</MenuItem>
                 </Menu>
               </div>
             </li>
@@ -249,8 +249,8 @@ export default function Navbar() {
                     'aria-labelledby': 'archive-button',
                   }}
                 >
-                  <MenuItem onClick={handleArchiveClose}>past events</MenuItem>
-                  <MenuItem onClick={handleArchiveClose}>pictures</MenuItem>
+                  <MenuItem onClick={handleArchiveClose} disabled={ true }>past events</MenuItem>
+                  <MenuItem onClick={handleArchiveClose} disabled={ true }>pictures</MenuItem>
                 </Menu>
               </div>
             </li>

@@ -51,7 +51,6 @@ export default function Footer() {
           <div className={ footer['section-content'] }>
             <p>Dammweg 216</p>
             <p>12057 Berlin</p>
-            <br/>
             <div ref={mapContainer} className={ footer.map } />
           </div>
         </div>
@@ -99,7 +98,7 @@ export default function Footer() {
                 <p>Twitter</p>
               </a>
             </Link>
-            <Link href={ "#" }>
+            <Link href={ "https://t.me/tubman_bot" }>
               <a className={ footer['section-row']}>
                 <TelegramIcon/>
                 <p>Telegram</p>
