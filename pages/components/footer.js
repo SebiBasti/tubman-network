@@ -24,7 +24,7 @@ export default function Footer() {
                     src="https://maps.google.com/maps?width=250&amp;height=250&amp;hl=en&amp;q=Dammweg%20216%20Berlin+(Tubman%20Network)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                     width="250" height="250" frameBorder="0"></iframe>
             <Script type='text/javascript'
-                    src='https://embedmaps.com/google-maps-authorization/script.js?id=deb4b60c96ed20218c721a3a185e56d4b1c07fc6'>
+                    src={`https://embedmaps.com/google-maps-authorization/script.js?id=deb4b60c96ed20218c721a3a185e56d4b1c07fc6`}>
 
             </Script>
           </div>
