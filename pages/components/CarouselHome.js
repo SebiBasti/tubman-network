@@ -5,10 +5,10 @@ import { Splide, SplideSlide } from '@splidejs/react-splide'
 export default function CarouselHome() {
 
   return (
-    <>
-      <h2 className={ carouselCSS.header }>Our work:</h2>
+    <section className={ carouselCSS.container }>
+      <h2 className={ carouselCSS.header }>Our work</h2>
       <Splide
-        className={ carouselCSS.container }
+        className={ carouselCSS['container-carousel'] }
         aria-label="My Favorite Images"
         data-splide='{
           "type":"loop",
@@ -21,6 +21,6 @@ export default function CarouselHome() {
           <img className={ carouselCSS.image } src="/inatimi-nathus.jpeg" alt="Image 2"/>
         </SplideSlide>
       </Splide>
-    </>
+    </section>
   )
 }

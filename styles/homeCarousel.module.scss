@@ -1,11 +1,27 @@
 .container {
-  max-width: 750px;
+  position: relative;
+  width: 100%;
+  max-width: min(900px, 100vw - 4rem);
+  margin: 0 auto 2em auto;
+  padding: 0 2em 2em 2em;
+}
+
+.container-carousel {
+  max-width: min(900px, 100vw - 4rem);
   margin: 1rem auto;
 }
 
 .header {
-  margin: 1rem auto;
   width: max-content;
+  color: var(--blue);
+  font-size: 30px;
+  margin-top: 0;
+
+  &:after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid var(--light-blue);
+  }
 }
 
 .slide {

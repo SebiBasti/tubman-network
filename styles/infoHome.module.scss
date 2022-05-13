@@ -2,7 +2,7 @@
   position: relative;
   max-width: min(900px, 100vw - 4rem);
   margin: 2em auto;
-  padding: 2em 2em 4em 2em;
+  padding: 2em;
 
   &:after {
     content: "";
@@ -31,5 +31,5 @@
 .link {
   position: absolute !important;
   right: calc(2em + 4px);
-  bottom: 6em;
+  bottom: 3em;
 }
