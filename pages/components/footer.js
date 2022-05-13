@@ -7,6 +7,7 @@ import LaptopChromebookIcon from '@mui/icons-material/LaptopChromebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import TelegramIcon from '@mui/icons-material/Telegram'
+import Script from 'next/script'
 
 export default function Footer() {
 
@@ -22,10 +23,10 @@ export default function Footer() {
             <iframe scrolling="no" marginHeight="0" marginWidth="0" id="gmap_canvas"
                     src="https://maps.google.com/maps?width=250&amp;height=250&amp;hl=en&amp;q=Dammweg%20216%20Berlin+(Tubman%20Network)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                     width="250" height="250" frameBorder="0"></iframe>
-            <script type='text/javascript'
+            <Script type='text/javascript'
                     src='https://embedmaps.com/google-maps-authorization/script.js?id=deb4b60c96ed20218c721a3a185e56d4b1c07fc6'>
 
-            </script>
+            </Script>
           </div>
         </div>
         <div className={ footer.section }>
