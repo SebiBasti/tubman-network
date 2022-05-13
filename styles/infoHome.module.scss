@@ -1,10 +1,14 @@
 .container {
   position: relative;
-  max-width: min(1000px, calc(100vw - 4rem));
+  max-width: min(900px, 100vw - 4rem);
   margin: 2em auto;
-  background-color: var(--super-light-grey);
   padding: 2em 2em 4em 2em;
-  box-shadow: 0 0 2px var(--blue);
+
+  &:after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid var(--light-blue);
+  }
 }
 
 .header {
@@ -26,6 +30,6 @@
 
 .link {
   position: absolute !important;
-  right: 2em;
-  bottom: 2em;
+  right: calc(2em + 4px);
+  bottom: 6em;
 }

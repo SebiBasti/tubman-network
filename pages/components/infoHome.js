@@ -32,6 +32,8 @@ export default function InfoHome() {
           Ukraine. At our location in Neukölln, we process requests from an average of 100 people per day. Since our work
           is financed exclusively by private donations, we also ask for your help!
         </p>
+        <br/>
+        <br/>
         <Link href="/about_us">
           <Button variant="outlined" className={ infoHome.link }>
             read more
