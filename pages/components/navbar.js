@@ -111,6 +111,11 @@ export default function Navbar() {
                   <MenuItem onClick={handleAboutUsClose} disabled={ true }>Procedures</MenuItem>
                   <MenuItem onClick={handleAboutUsClose} disabled={ true }>Structure</MenuItem>
                   <MenuItem onClick={handleAboutUsClose} disabled={ true }>Vorstand</MenuItem>
+                  <MenuItem onClick={handleAboutUsClose}>
+                    <Link href={ "/what_we_do"}>
+                      <a>What we do</a>
+                    </Link>
+                  </MenuItem>
                 </Menu>
               </div>
             </li>

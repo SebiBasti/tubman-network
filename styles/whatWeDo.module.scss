@@ -1,0 +1,41 @@
+.container {
+  position: relative;
+  max-width: min(900px, 100vw - 4rem);
+  margin: 2em auto;
+  padding: 2em;
+
+  &:after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid var(--light-blue);
+  }
+}
+
+.header {
+  width: max-content;
+  color: var(--blue);
+  font-size: 30px;
+  margin-top: 0;
+
+  &:after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid var(--light-blue);
+  }
+}
+
+.list {
+  padding-left: 1em;
+  font-size: 18px;
+
+  li {
+    padding: .25em 0;
+  }
+}
+
+.subheader {
+  width: max-content;
+  color: var(--blue);
+  font-size: 30px;
+  margin-top: 0;
+}
