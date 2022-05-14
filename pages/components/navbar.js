@@ -116,6 +116,11 @@ export default function Navbar() {
                       <a>What we do</a>
                     </Link>
                   </MenuItem>
+                  <MenuItem onClick={handleAboutUsClose}>
+                    <Link href={ "/what_we_offer"}>
+                      <a>What we offer</a>
+                    </Link>
+                  </MenuItem>
                 </Menu>
               </div>
             </li>

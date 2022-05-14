@@ -1,53 +1,47 @@
 import whatWeDo from '../styles/whatWeDo.module.scss'
 
-export default function WhatWeDO() {
+export default function WhatWeDo() {
 
   return (
     <section className={ whatWeDo.container }>
-      <h2 className={ whatWeDo.header }>We offer and arrange:</h2>
-      <ul className={ whatWeDo.list }>
-        <li>emergency and private accommodation in and around Berlin</li>
-        <li>medical care</li>
-        <li>legal advice</li>
-        <li>Vocational counseling and labor market integration</li>
-        <li>Culturally sensitive social counseling in different languages</li>
-        <li>Support around children and family matters</li>
-        <li>German and integration courses</li>
-        <li>Trauma therapy</li>
-        <li>Several hot meals and snacks daily</li>
-        <li>Hygiene products</li>
-        <li>clothing</li>
-        <li>Baby supplies</li>
-        <li>Electronic communication devices</li>
-        <li>Childcare</li>
-        <li>Family-friendly community events</li>
-        <li>Empowerment services for children and youth</li>
-        <li>Advanced education and awareness training on forms and mechanisms of discrimination</li>
-        <li>Anti-Black Racism and Critical Whiteness</li>
-        <li>Support of BIPoC organizations in professionalization and capacity building</li>
-      </ul>
-      <h2 className={ whatWeDo.header }>What we fund through your donations:</h2>
-      <ul className={ whatWeDo.list }>
-        <li>Rent for our locations at Dammweg 216 and Mehringdamm 20 in Berlin</li>
-        <li>Rent for emergency accommodation in hostels and youth hostels</li>
-        <li>Payment for our German teachers</li>
-        <li>German course books, exam fees and license</li>
-        <li>Internet, printing costs, office supplies</li>
-        <li>Food for 200 meals per day</li>
-        <li>kitchen equipment</li>
-        <li>Medical supplies</li>
-        <li>hygiene products</li>
-        <li>New underwear</li>
-        <li>Baby supplies</li>
-        <li>Blankets, mattresses etc.</li>
-        <li>Electronic device</li>
-        <li>Sim cards</li>
-        <li>Craftsmen costs for repair and maintenance of our sites</li>
-        <li>means of transport</li>
-        <li>Cleaning supplies</li>
-        <li>Covid-19 test kits and face masks</li>
-      </ul>
-      <h2 className={ whatWeDo.subheader }>We thank you very much for your support!</h2>
+      <h2 className={ whatWeDo.header }>What we do:</h2>
+      <img className={ whatWeDo.image } src="/what_we_do.jpeg" alt="what we do picture"/>
+      <div className={ whatWeDo.content }>
+        <p>
+          Since 27.2 . 2022, the tubman.network and their alliance partners have supported more than 1700 people of
+          African and Afro-diasporic origin and BiPoC with a warm welcome, temporary accommodation, hot meals, hygiene
+          items, legal advice and medical consultations with about 15 doctors with about 20 translators.
+        </p>
+        <p>
+          In addition, 140 students are already enrolled in a certified German course (A1-C1) from Monday to Friday with
+          childcare, so that parents with young children can also access the course. We offer creative therapy sessions
+          for trauma-related symptoms and vocational counselling for refugees as well as hosts. The weekly sessions for
+          children and their families are well attended.
+        </p>
+        <p>
+          A documentary film illustrating the numerous human rights violations, racism and discrimination and the demand
+          of Amnesty International is in progress.
+        </p>
+        <p>
+          A welcome party is held on the last Saturday of the month, last month attended by more than 300 people.
+        </p>
+        <p>
+          We have already received and responded to more than 4000 mails via help@tubman.network, all on a voluntary
+          basis.
+        </p>
+        <p>
+          We sometime still have about up to 100 people arriving daily, desperate for places to sleep, lacking the
+          opportunity to wash and the need for food is slowly but surely exceeding our capacity.
+        </p>
+        <p>
+          In the coming months we expect more families, many more sick and wounded. We urgently need funds to cover the
+          basic needs of people and for 8 coordinators who can provide expert guidance to the approximately 600
+          volunteers.
+        </p>
+        <p>
+          Please also support us in your family and professional networks.
+        </p>
+      </div>
     </section>
   )
 }

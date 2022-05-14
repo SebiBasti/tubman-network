@@ -24,26 +24,18 @@
   }
 }
 
-.image {
-  float: left;
-  margin-right: 1em;
-  margin-bottom: 1em;
-  width: 50%;
-}
+.list {
+  padding-left: 1em;
+  font-size: 18px;
 
-.content {
-
-  p {
-    overflow: visible;
-
-    &:first-child {
-      margin-top: 0;
-    }
+  li {
+    padding: .25em 0;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .image {
-    width: 100%;
-  }
+.subheader {
+  width: max-content;
+  color: var(--blue);
+  font-size: 30px;
+  margin-top: 0;
 }
