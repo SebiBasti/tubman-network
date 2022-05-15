@@ -8,3 +8,23 @@ module.exports = {
   nextConfig,
   i18n
 };
+
+// module.exports = (phase, { defaultConfig }) => {
+//   return {
+//     ...defaultConfig,
+//     nextConfig,
+//     i18n,
+//
+//     webpack: (config) => {
+//       config.resolve = {
+//         ...config.resolve,
+//         fallback: {
+//           "fs": false,
+//           "path": false,
+//           "os": false,
+//         }
+//       }
+//       return config
+//     }
+//   }
+// }
