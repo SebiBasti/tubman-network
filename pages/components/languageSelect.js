@@ -15,8 +15,8 @@ const LanguageSelect = () => {
   const router = useRouter();
 
   const languageMap = {
-    de: { label: "🇩🇪 Deutsch", dir: "ltr", active: false },
     en: { label: "🇬🇧 English", dir: "ltr", active: true },
+    de: { label: "🇩🇪 Deutsch", dir: "ltr", active: false },
     ua: { label: "🇺🇦 український", dir: "ltr", active: false },
     ru: { label: "🇷🇺 Русский", dir: "ltr", active: false },
     sw: { label: "kiswahili", dir: "ltr", active: false},
