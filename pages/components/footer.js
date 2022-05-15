@@ -10,11 +10,11 @@ import TelegramIcon from '@mui/icons-material/Telegram'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import mapboxgl from '!mapbox-gl'
 import { useEffect, useRef, useState } from "react";
-import {useTranslation} from "next-i18next"; // eslint-disable-line import/no-webpack-loader-syntax
-
-mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_KEY
+import {useTranslation} from "next-i18next";
+import process from "eslint-config-next"; // eslint-disable-line import/no-webpack-loader-syntax
 
 export default function Footer() {
+  mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_KEY
   const { t } = useTranslation('common');
   const mapContainer = useRef(null);
   const map = useRef(null);
