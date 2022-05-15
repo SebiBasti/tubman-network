@@ -1,0 +1,101 @@
+{
+  "head": {
+    "title": "tubman network",
+    "description": "Jeder große Traum beginnt mit einem Träumer."
+  },
+  "select_language": "Wähle eine Sprache",
+  "banner": {
+    "header": "Jeder große Traum beginnt mit einem Träumer.",
+    "donateButton": "Spenden"
+  },
+  "carouselHome": {
+    "header": "Unsere Arbeit",
+    "image1Alt": "image 1",
+    "image2Alt": "image 2"
+  },
+  "footer": {
+    "section1": {
+      "header": "Addresse"
+    },
+    "section2": {
+      "header": "Kontakt aufnehmen"
+    },
+    "section3": {
+      "header": "Folge uns",
+      "instagram": "Instagram",
+      "twitter": "Twitter",
+      "telegram": "Telegram"
+    }
+  },
+  "infoHome": {
+    "header": "Wir sind tubman.network",
+    "content1": "Wir sind eine Organisation von Freiwilligen in Berlin, die mit Hilfe von afrikanischen und afro-diasporischen Vereinen, Unternehmen und Einzelpersonen im Februar 2022 gegründet wurde. Der Beginn unserer Tätigkeit war eine Reaktion auf die rassistisch motivierten Menschenrechtsverletzungen im Zusammenhang mit Menschen, die aus ukrainischen Kriegsgebieten fliehen. Derzeit sind wir ein Verein in Gründung: Tubman Network e.V. - Koalition Schwarzer Organisationen in Deutschland & Verbündete.",
+    "content2": "In Zusammenarbeit mit unseren Bündnispartnern bieten wir Menschen afrikanischer und afro-diasporischer Herkunft, die von Rassismus betroffen sind, sowie BIPoC Unterstützung in verschiedenen Lebensbereichen.",
+    "content3": "Derzeit konzentriert sich unsere Arbeit auf die kostenlose Nothilfe für Menschen aus Drittländern, die aus der Ukraine geflohen sind. An unserem Standort in Neukölln bearbeiten wir die Anfragen von durchschnittlich 100 Menschen pro Tag. Da sich unsere Arbeit ausschließlich durch private Spenden finanziert, bitten wir auch um Ihre Hilfe!",
+    "button": "weiter lesen"
+  },
+  "navbar": {
+    "logoAlt": "tubman network logo",
+    "aboutUs": {
+      "header": "über uns",
+      "item1": "Satzung",
+      "item2": "Partner",
+      "item3": "Richtlinien",
+      "item4": "Abläufe",
+      "item5": "Struktur",
+      "item6": "Vorstand",
+      "item7": "Was wir machen",
+      "item8": "Was wir anbieten"
+    },
+    "activities": {
+      "header": "Aktivitäten",
+      "item1": "Unterkunftsdienste",
+      "item2": "Ratschläge für Fachleute",
+      "item3": "Ratschläge für Studenten",
+      "item4": "Catering-Dienste",
+      "item5": "Unterstützung für Kinder und Familien",
+      "item6": "Community Veranstaltungen",
+      "item7": "Deutschkurse",
+      "item8": "Einführungsdienste",
+      "item9": "Rechtsberatung",
+      "item10": "Psychologische Unterstützung",
+      "item11": "Dienstleistungen für Gastgeber",
+      "item12": "Training",
+      "item13": "Ehrenamtliche"
+    },
+    "locations": {
+      "header": "Standorte",
+      "item3": "Neuen Standort vorschlagen"
+    },
+    "faq": {
+      "header": "faq"
+    },
+    "press": {
+      "header": "Presse",
+      "item1": "Presseberichte",
+      "item2": "Pressekontakt"
+    },
+    "news": {
+      "header": "Neuigkeiten",
+      "item1": "Neuigkeiten",
+      "item2": "Anmeldung zum Newsletter"
+    },
+    "archive": {
+      "header": "Archiv",
+      "item1": "vergangene Veranstaltungen",
+      "item2": "Bilder"
+    }
+  },
+  "whatWeDo": {
+    "header": "Was wir tun:",
+    "pictureAlt": "was wir tun Bild",
+    "content1": "Seit dem 27.2.2022 haben das tubman.network und seine Bündnispartner mehr als 1700 Menschen afrikanischer und afro-diasporischer Herkunft und BiPoC mit einem herzlichen Empfang, einer vorübergehenden Unterkunft, warmen Mahlzeiten, Hygieneartikeln, Rechtsberatung und medizinischen Konsultationen bei etwa 15 Ärzten mit etwa 20 Übersetzern unterstützt.",
+    "content2": "Darüber hinaus sind bereits 140 Schüler in einem zertifizierten Deutschkurs (A1-C1) von Montag bis Freitag mit Kinderbetreuung eingeschrieben, so dass auch Eltern mit kleinen Kindern den Kurs besuchen können. Wir bieten Kreativtherapiesitzungen für traumabedingte Symptome und Berufsberatung sowohl für Flüchtlinge als auch für Gastgeber an. Die wöchentlichen Sitzungen für Kinder und ihre Familien sind gut besucht.",
+    "content3": "Ein Dokumentarfilm, der die zahlreichen Menschenrechtsverletzungen, den Rassismus und die Diskriminierung sowie die Forderung von Amnesty International illustriert, ist in Arbeit.",
+    "content4": "Am letzten Samstag des Monats findet eine Willkommensparty statt, an der im letzten Monat mehr als 300 Personen teilnahmen.",
+    "content5": "Wir haben bereits mehr als 4000 Mails über help@tubman.network erhalten und beantwortet, alle auf freiwilliger Basis.",
+    "content6": "Manchmal kommen immer noch bis zu 100 Menschen täglich an, die verzweifelt nach einem Schlafplatz suchen, keine Möglichkeit haben, sich zu waschen, und der Bedarf an Lebensmitteln übersteigt langsam aber sicher unsere Kapazitäten.",
+    "content7": "In den kommenden Monaten erwarten wir weitere Familien, viele weitere Kranke und Verwundete. Wir benötigen dringend Mittel zur Deckung der Grundbedürfnisse der Menschen und für 8 Koordinatoren, die die rund 600 Freiwilligen fachkundig anleiten können.",
+    "content8": "Bitte unterstützen Sie uns auch in Ihren familiären und beruflichen Netzwerken."
+  }
+}

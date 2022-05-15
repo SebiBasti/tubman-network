@@ -1,0 +1,101 @@
+{
+  "head": {
+    "title": "tubman network",
+    "description": "Every great dream begins with a dreamer."
+  },
+  "select_language": "Select a language",
+  "banner": {
+    "header": "Every great dream begins with a dreamer.",
+    "donateButton": "Donate"
+  },
+  "carouselHome": {
+    "header": "Our work",
+    "image1Alt": "image 1",
+    "image2Alt": "image 2"
+  },
+  "footer": {
+    "section1": {
+      "header": "Address"
+    },
+    "section2": {
+      "header": "Get in touch"
+    },
+    "section3": {
+      "header": "Follow us",
+      "instagram": "Instagram",
+      "twitter": "Twitter",
+      "telegram": "Telegram"
+    }
+  },
+  "infoHome": {
+    "header": "We are tubman.network",
+    "content1": "We are an organization of volunteers in Berlin founded with the help of African and Afro-Diasporic associations, companies and individuals in February 2022. The start of our activity came as a reaction to the racially motivated human rights violations related to people fleeing from Ukrainian war zones. Currently, we are an association in formation: Tubman Network e.V. – Coalition of Black Organizations in Germany & Allies.",
+    "content2": "In cooperation with our alliance partners we offer support in different areas of life to people of African and Afro-Diasporic origin affected by racism as well as BIPoC.",
+    "content3": "Currently, our work focuses on providing free emergency assistance to people from third countries who have fled Ukraine. At our location in Neukölln, we process requests from an average of 100 people per day. Since our work is financed exclusively by private donations, we also ask for your help!",
+    "button": "read more"
+  },
+  "navbar": {
+    "logoAlt": "tubman network logo",
+    "aboutUs": {
+      "header": "about us",
+      "item1": "Constitution",
+      "item2": "Partner",
+      "item3": "Policies",
+      "item4": "Procedures",
+      "item5": "Structure",
+      "item6": "Executive Board",
+      "item7": "What we do",
+      "item8": "What we offer"
+    },
+    "activities": {
+      "header": "Activities",
+      "item1": "Accommodation services",
+      "item2": "Advice for Professionals",
+      "item3": "Advice for Students",
+      "item4": "Catering Services",
+      "item5": "Children and Family Support",
+      "item6": "Community Events",
+      "item7": "German classes",
+      "item8": "Intake services",
+      "item9": "Legal Advice",
+      "item10": "Psychological Support",
+      "item11": "Services for Hosts",
+      "item12": "Training",
+      "item13": "Volunteers"
+    },
+    "locations": {
+      "header": "Locations",
+      "item3": "Suggest new location"
+    },
+    "faq": {
+      "header": "faq"
+    },
+    "press": {
+      "header": "Press",
+      "item1": "press coverage",
+      "item2": "press contact"
+    },
+    "news": {
+      "header": "News",
+      "item1": "News",
+      "item2": "Signup for our Newsletter"
+    },
+    "archive": {
+      "header": "Archive",
+      "item1": "past events",
+      "item2": "pictures"
+    }
+  },
+  "whatWeDo": {
+    "header": "What we do:",
+    "pictureAlt": "what we do picture",
+    "content1": "Since 27.2.2022, the tubman.network and their alliance partners have supported more than 1700 people of African and Afro-diasporic origin and BiPoC with a warm welcome, temporary accommodation, hot meals, hygiene items, legal advice and medical consultations with about 15 doctors with about 20 translators.",
+    "content2": "In addition, 140 students are already enrolled in a certified German course (A1-C1) from Monday to Friday with childcare, so that parents with young children can also access the course. We offer creative therapy sessions for trauma-related symptoms and vocational counselling for refugees as well as hosts. The weekly sessions for children and their families are well attended.",
+    "content3": "A documentary film illustrating the numerous human rights violations, racism and discrimination and the demand of Amnesty International is in progress.",
+    "content4": "A welcome party is held on the last Saturday of the month, last month attended by more than 300 people.",
+    "content5": "We have already received and responded to more than 4000 mails via help@tubman.network, all on a voluntary basis.",
+    "content6": "We sometime still have about up to 100 people arriving daily, desperate for places to sleep, lacking the opportunity to wash and the need for food is slowly but surely exceeding our capacity.",
+    "content7": "In the coming months we expect more families, many more sick and wounded. We urgently need funds to cover the basic needs of people and for 8 coordinators who can provide expert guidance to the approximately 600 volunteers.",
+    "content8": "Please also support us in your family and professional networks."
+  }
+}

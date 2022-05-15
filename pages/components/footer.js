@@ -7,14 +7,15 @@ import LaptopChromebookIcon from '@mui/icons-material/LaptopChromebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import TelegramIcon from '@mui/icons-material/Telegram'
-import Script from 'next/script'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import mapboxgl from '!mapbox-gl'
-import { useEffect, useRef, useState } from "react"; // eslint-disable-line import/no-webpack-loader-syntax
+import { useEffect, useRef, useState } from "react";
+import {useTranslation} from "next-i18next"; // eslint-disable-line import/no-webpack-loader-syntax
 
-mapboxgl.accessToken = 'pk.eyJ1Ijoic2ViaWJhc3RpIiwiYSI6ImNsMzRnaTlzYTAzbHAzam1xNjQ0czBwZHcifQ.mlpxyheaJvIuaQGFBr4PEg';
+mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_KEY
 
 export default function Footer() {
+  const { t } = useTranslation('common');
   const mapContainer = useRef(null);
   const map = useRef(null);
   const [lng, setLng] = useState(13.4675671);
@@ -29,7 +30,7 @@ export default function Footer() {
       center: [lng, lat],
       zoom: zoom
     });
-    const marker = new mapboxgl.Marker()
+    new mapboxgl.Marker()
       .setLngLat([13.4675671, 52.4727998])
       .addTo(map.current);
   });
@@ -47,7 +48,7 @@ export default function Footer() {
     <footer>
       <div className={ footer.container }>
         <div className={ footer['section-map'] }>
-          <h3>Address</h3>
+          <h3>{t("footer.section1.header")}</h3>
           <div className={ footer['section-content'] }>
             <p>Dammweg 216</p>
             <p>12057 Berlin</p>
@@ -55,7 +56,7 @@ export default function Footer() {
           </div>
         </div>
         <div className={ footer.section }>
-          <h3>Get in touch</h3>
+          <h3>{t("footer.section2.header")}</h3>
           <div className={ footer['section-content'] }>
             <Link href={ "tel:+4915124685957"}>
               <a className={ footer['section-row']}>
@@ -84,24 +85,24 @@ export default function Footer() {
           </div>
         </div>
         <div className={ footer.section }>
-          <h3>Follow us</h3>
+          <h3>{t("footer.section3.header")}</h3>
           <div className={ footer['section-content'] }>
             <Link href={ "https://www.instagram.com/portal.tubman.network/" }>
               <a className={ footer['section-row']}>
                 <InstagramIcon/>
-                <p>Instagram</p>
+                <p>{t("footer.section3.instagram")}</p>
               </a>
             </Link>
             <Link href={ "https://twitter.com/NetworkTubman" }>
               <a className={ footer['section-row']}>
                 <TwitterIcon/>
-                <p>Twitter</p>
+                <p>{t("footer.section3.twitter")}</p>
               </a>
             </Link>
             <Link href={ "https://t.me/tubman_bot" }>
               <a className={ footer['section-row']}>
                 <TelegramIcon/>
-                <p>Telegram</p>
+                <p>{t("footer.section3.telegram")}</p>
               </a>
             </Link>
           </div>

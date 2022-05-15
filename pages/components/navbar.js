@@ -4,8 +4,10 @@ import dynamic from "next/dynamic"
 import Button from '@mui/material/Button'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
-import { useState } from 'react'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useState } from "react";
 
 const theme = createTheme({
   palette: {
@@ -20,7 +22,8 @@ const LanguageSelect = dynamic(
   { ssr: false }
 )
 
-export default function Navbar() {
+function Navbar() {
+  const { t } = useTranslation('common');
   // about us
   const [aboutUsEl, setAboutUsEl] = useState(null);
   const openAboutUs = Boolean(aboutUsEl);
@@ -81,7 +84,7 @@ export default function Navbar() {
       <header className={navbar.container}>
         <input type="checkbox" id="nav-toggle" className={navbar.toggle}/>
         <Link href={"/"}>
-          <img src="/tubman_logo.png" alt=""/>
+          <img src="/tubman_logo.png" alt={t("navbar.logoAlt")}/>
         </Link>
         <nav className={navbar.nav}>
           <ul>
@@ -94,7 +97,7 @@ export default function Navbar() {
                   aria-expanded={openAboutUs ? 'true' : undefined}
                   onClick={handleAboutUsClick}
                 >
-                  About Us
+                  {t("navbar.aboutUs.header")}
                 </Button>
                 <Menu
                   id="about-us-menu"
@@ -105,20 +108,20 @@ export default function Navbar() {
                     'aria-labelledby': 'about-us-button',
                   }}
                 >
-                  <MenuItem onClick={handleAboutUsClose} disabled={ true }>Constitution</MenuItem>
-                  <MenuItem onClick={handleAboutUsClose} disabled={ true }>Partner</MenuItem>
-                  <MenuItem onClick={handleAboutUsClose} disabled={ true }>Policies</MenuItem>
-                  <MenuItem onClick={handleAboutUsClose} disabled={ true }>Procedures</MenuItem>
-                  <MenuItem onClick={handleAboutUsClose} disabled={ true }>Structure</MenuItem>
-                  <MenuItem onClick={handleAboutUsClose} disabled={ true }>Vorstand</MenuItem>
+                  <MenuItem onClick={handleAboutUsClose} disabled={ true }>{t("navbar.aboutUs.item1")}</MenuItem>
+                  <MenuItem onClick={handleAboutUsClose} disabled={ true }>{t("navbar.aboutUs.item2")}</MenuItem>
+                  <MenuItem onClick={handleAboutUsClose} disabled={ true }>{t("navbar.aboutUs.item3")}</MenuItem>
+                  <MenuItem onClick={handleAboutUsClose} disabled={ true }>{t("navbar.aboutUs.item4")}</MenuItem>
+                  <MenuItem onClick={handleAboutUsClose} disabled={ true }>{t("navbar.aboutUs.item5")}</MenuItem>
+                  <MenuItem onClick={handleAboutUsClose} disabled={ true }>{t("navbar.aboutUs.item6")}</MenuItem>
                   <MenuItem onClick={handleAboutUsClose}>
                     <Link href={ "/what_we_do"}>
-                      <a>What we do</a>
+                      <a>{t("navbar.aboutUs.item7")}</a>
                     </Link>
                   </MenuItem>
                   <MenuItem onClick={handleAboutUsClose}>
                     <Link href={ "/what_we_offer"}>
-                      <a>What we offer</a>
+                      <a>{t("navbar.aboutUs.item8")}</a>
                     </Link>
                   </MenuItem>
                 </Menu>
@@ -144,19 +147,19 @@ export default function Navbar() {
                     'aria-labelledby': 'activities-button',
                   }}
                 >
-                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Accommodation services</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Advice for Professionals</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Advice for Students</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Catering Services</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Children and Family Support</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>CommUnity Events</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>German classes</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Intake services</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Legal Advice</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Psychological Support</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Services for Hosts</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Training</MenuItem>
-                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>Volunteers</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>{t("navbar.activities.item1")}</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>{t("navbar.activities.item2")}</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>{t("navbar.activities.item3")}</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>{t("navbar.activities.item4")}</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>{t("navbar.activities.item5")}</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>{t("navbar.activities.item6")}</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>{t("navbar.activities.item7")}</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>{t("navbar.activities.item8")}</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>{t("navbar.activities.item9")}</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>{t("navbar.activities.item10")}</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>{t("navbar.activities.item11")}</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>{t("navbar.activities.item12")}</MenuItem>
+                  <MenuItem onClick={handleActivitiesClose} disabled={ true }>{t("navbar.activities.item13")}</MenuItem>
                 </Menu>
               </div>
             </li>
@@ -169,7 +172,7 @@ export default function Navbar() {
                   aria-expanded={openLocations ? 'true' : undefined}
                   onClick={handleLocationsClick}
                 >
-                  Locations
+                  {t("navbar.locations.header")}
                 </Button>
                 <Menu
                   id="Locations-menu"
@@ -182,13 +185,13 @@ export default function Navbar() {
                 >
                   <MenuItem onClick={handleLocationsClose} disabled={ true }>Dammweg 216</MenuItem>
                   <MenuItem onClick={handleLocationsClose} disabled={ true }>Meeringdamm 20</MenuItem>
-                  <MenuItem onClick={handleLocationsClose} disabled={ true }>Suggest new location</MenuItem>
+                  <MenuItem onClick={handleLocationsClose} disabled={ true }>{t("navbar.locations.item3")}</MenuItem>
                 </Menu>
               </div>
             </li>
             <li>
               <Link href="/faq">
-                <Button>FAQ</Button>
+                <Button>{t("navbar.faq.header")}</Button>
               </Link>
             </li>
             <li>
@@ -200,7 +203,7 @@ export default function Navbar() {
                   aria-expanded={openPress ? 'true' : undefined}
                   onClick={handlePressClick}
                 >
-                  Press
+                  {t("navbar.press.header")}
                 </Button>
                 <Menu
                   id="press-menu"
@@ -211,8 +214,8 @@ export default function Navbar() {
                     'aria-labelledby': 'press-button',
                   }}
                 >
-                  <MenuItem onClick={handlePressClose} disabled={ true }>press coverage</MenuItem>
-                  <MenuItem onClick={handlePressClose} disabled={ true }>press contact</MenuItem>
+                  <MenuItem onClick={handlePressClose} disabled={ true }>{t("navbar.press.item1")}</MenuItem>
+                  <MenuItem onClick={handlePressClose} disabled={ true }>{t("navbar.press.item2")}</MenuItem>
                 </Menu>
               </div>
             </li>
@@ -225,7 +228,7 @@ export default function Navbar() {
                   aria-expanded={openNews ? 'true' : undefined}
                   onClick={handleNewsClick}
                 >
-                  News
+                  {t("navbar.news.header")}
                 </Button>
                 <Menu
                   id="news-menu"
@@ -236,8 +239,8 @@ export default function Navbar() {
                     'aria-labelledby': 'news-button',
                   }}
                 >
-                  <MenuItem onClick={handleNewsClose} disabled={ true }>News</MenuItem>
-                  <MenuItem onClick={handleNewsClose} disabled={ true }>signup for our Newsletter</MenuItem>
+                  <MenuItem onClick={handleNewsClose} disabled={ true }>{t("navbar.news.item1")}</MenuItem>
+                  <MenuItem onClick={handleNewsClose} disabled={ true }>{t("navbar.news.item2")}</MenuItem>
                 </Menu>
               </div>
             </li>
@@ -250,7 +253,7 @@ export default function Navbar() {
                   aria-expanded={openArchive ? 'true' : undefined}
                   onClick={handleArchiveClick}
                 >
-                  Archive
+                  {t("navbar.archive.header")}
                 </Button>
                 <Menu
                   id="archive-menu"
@@ -261,8 +264,8 @@ export default function Navbar() {
                     'aria-labelledby': 'archive-button',
                   }}
                 >
-                  <MenuItem onClick={handleArchiveClose} disabled={ true }>past events</MenuItem>
-                  <MenuItem onClick={handleArchiveClose} disabled={ true }>pictures</MenuItem>
+                  <MenuItem onClick={handleArchiveClose} disabled={ true }>{t("navbar.archive.item1")}</MenuItem>
+                  <MenuItem onClick={handleArchiveClose} disabled={ true }>{t("navbar.archive.item2")}</MenuItem>
                 </Menu>
               </div>
             </li>
@@ -279,3 +282,11 @@ export default function Navbar() {
     </ThemeProvider>
   )
 }
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale),
+  },
+})
+
+export default Navbar;

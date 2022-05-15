@@ -1,18 +1,20 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
-import i18next from "i18next";
-
+import {useTranslation} from "next-i18next";
+import i18next from "i18next"
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Button from '@mui/material/Button';
 import Popover from "@mui/material/Popover";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListSubheader from "@mui/material/ListSubheader";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import Link from "next/link";
+import {router} from "next/client";
 
 const LanguageSelect = () => {
   const languageMap = {
-    de: { label: "🇩🇪 Deutsch", dir: "ltr", active: true},
-    en: { label: "🇬🇧 English", dir: "ltr", active: false },
+    de: { label: "🇩🇪 Deutsch", dir: "ltr", active: false },
+    en: { label: "🇬🇧 English", dir: "ltr", active: true },
     ua: { label: "🇺🇦 український", dir: "ltr", active: false },
     ru: { label: "🇷🇺 Русский", dir: "ltr", active: false },
     sw: { label: "kiswahili", dir: "ltr", active: false},
@@ -24,7 +26,7 @@ const LanguageSelect = () => {
       localStorage.getItem("i18nextLng") :
       "en"
 
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
 
   const [menuAnchor, setMenuAnchor] = React.useState(null);
   React.useEffect(() => {
@@ -62,7 +64,12 @@ const LanguageSelect = () => {
                   setMenuAnchor(null);
                 }}
               >
-                {languageMap[item].label}
+                <Link
+                  href={`${router.pathname}`}
+                  locale={item}
+                >
+                  {languageMap[item].label}
+                </Link>
               </ListItem>
             ))}
           </List>
@@ -71,5 +78,11 @@ const LanguageSelect = () => {
     </div>
   );
 };
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale),
+  },
+})
 
 export default LanguageSelect;

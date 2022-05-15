@@ -3,6 +3,7 @@ import '../styles/colors.scss'
 import i18n from "../i18next/i18nextConf";
 import { useTranslation } from "react-i18next";
 import dynamic from 'next/dynamic'
+import { appWithTranslation } from 'next-i18next';
 import Navbar from "./components/navbar"
 import Head from 'next/head'
 import Footer from "./components/footer";
@@ -22,4 +23,4 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
-export default MyApp
+export default appWithTranslation(MyApp)

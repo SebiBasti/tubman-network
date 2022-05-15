@@ -1,7 +1,10 @@
 import whatWeOffer from '../styles/whatWeOffer.module.scss'
+import {useTranslation} from "next-i18next";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import WhatWeDo from "./what_we_do";
 
-export default function WhatWeOffer() {
-
+function WhatWeOffer() {
+  const { t } = useTranslation('common');
   return (
     <section className={ whatWeOffer.container }>
       <h2 className={ whatWeOffer.header }>We offer and arrange:</h2>
@@ -51,3 +54,14 @@ export default function WhatWeOffer() {
     </section>
   )
 }
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale)),
+      // Will be passed to the page component as props
+    },
+  };
+}
+
+export default WhatWeOffer

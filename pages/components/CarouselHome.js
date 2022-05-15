@@ -1,12 +1,13 @@
 import carouselCSS from '../../styles/homeCarousel.module.scss'
 import '@splidejs/react-splide/css';
 import { Splide, SplideSlide } from '@splidejs/react-splide'
+import {useTranslation} from "next-i18next";
 
 export default function CarouselHome() {
-
+  const { t } = useTranslation('common');
   return (
     <section className={ carouselCSS.container }>
-      <h2 className={ carouselCSS.header }>Our work</h2>
+      <h2 className={ carouselCSS.header }>{t("carouselHome.header")}</h2>
       <Splide
         className={ carouselCSS['container-carousel'] }
         aria-label="My Favorite Images"
@@ -15,10 +16,10 @@ export default function CarouselHome() {
           "perPage":1
         }'>
         <SplideSlide className={ carouselCSS.slide } >
-          <img className={ carouselCSS.image } src="/inatimi-nathus.jpeg" alt="Image 1"/>
+          <img className={ carouselCSS.image } src="/inatimi-nathus.jpeg" alt={t("carouselHome.image1Alt")}/>
         </SplideSlide>
         <SplideSlide className={ carouselCSS.slide } >
-          <img className={ carouselCSS.image } src="/inatimi-nathus.jpeg" alt="Image 2"/>
+          <img className={ carouselCSS.image } src="/inatimi-nathus.jpeg" alt={t("carouselHome.image2Alt")}/>
         </SplideSlide>
       </Splide>
     </section>
