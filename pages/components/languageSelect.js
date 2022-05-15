@@ -1,15 +1,15 @@
-import React, {useEffect} from "react";
-import {useTranslation} from "next-i18next";
+import React, {useEffect} from "react"
+import { useTranslation } from "next-i18next"
 import i18next from "i18next"
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import Button from '@mui/material/Button';
-import Popover from "@mui/material/Popover";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListSubheader from "@mui/material/ListSubheader";
-import {serverSideTranslations} from "next-i18next/serverSideTranslations";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
+import Button from '@mui/material/Button'
+import Popover from "@mui/material/Popover"
+import List from "@mui/material/List"
+import ListItem from "@mui/material/ListItem"
+import ListSubheader from "@mui/material/ListSubheader"
+import {serverSideTranslations} from "next-i18next/serverSideTranslations"
+import Link from "next/link"
+import { useRouter } from "next/router"
 
 const LanguageSelect = () => {
   const router = useRouter();
@@ -28,7 +28,7 @@ const LanguageSelect = () => {
       localStorage.getItem("i18nextLng") :
       "en"
 
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('common')
 
   useEffect(() => {
     router.push(`/${selected}/${router.pathname}`);
@@ -37,7 +37,7 @@ const LanguageSelect = () => {
   const [menuAnchor, setMenuAnchor] = React.useState(null);
   useEffect(() => {
     document.body.dir = languageMap[selected].dir;
-  }, [menuAnchor, selected]);
+  }, [menuAnchor, selected])
 
   return (
     <div style={{display: "flex", justifyContent: "flex-end", alignItems: "center", height: "100%", width: "160px", marginLeft: "1rem"}}>
@@ -63,7 +63,6 @@ const LanguageSelect = () => {
             <ListSubheader>{t("select_language")}</ListSubheader>
             {Object.keys(languageMap)?.map(item => (
               <ListItem
-                button
                 key={item}
                 onClick={() => {
                   i18next.changeLanguage(item);
@@ -88,7 +87,7 @@ const LanguageSelect = () => {
 export const getStaticProps = async ({ locale }) => ({
   props: {
     ...await serverSideTranslations(locale),
-  },
+  }
 })
 
-export default LanguageSelect;
+export default LanguageSelect

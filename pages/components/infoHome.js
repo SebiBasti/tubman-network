@@ -29,7 +29,7 @@ export default function InfoHome() {
         </p>
         <br/>
         <br/>
-        <Link href="/about_us">
+        <Link href="/what_we_do">
           <Button variant="outlined" className={ infoHome.link }>
             {t("infoHome.button")}
           </Button>
