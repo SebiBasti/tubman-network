@@ -11,9 +11,9 @@ import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const router = useRouter();
-
 const LanguageSelect = () => {
+  const router = useRouter();
+
   const languageMap = {
     de: { label: "🇩🇪 Deutsch", dir: "ltr", active: false },
     en: { label: "🇬🇧 English", dir: "ltr", active: true },
