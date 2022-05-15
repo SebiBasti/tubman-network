@@ -14,7 +14,7 @@ function Home({ locale }) {
       <Head>
         <title>{t("head.title")}</title>
         <meta name="description" content={t("head.description")} />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon1.ico" />
       </Head>
       <Banner/>
       <InfoHome/>
