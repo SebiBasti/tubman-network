@@ -28,13 +28,12 @@ const LanguageSelect = () => {
       localStorage.getItem("i18nextLng") :
       "en"
 
-  router.push(selected)
-
   const { t } = useTranslation('common');
 
   const [menuAnchor, setMenuAnchor] = React.useState(null);
   React.useEffect(() => {
     document.body.dir = languageMap[selected].dir;
+    router.push(`/${selected}`);
   }, [menuAnchor, selected]);
 
   return (
