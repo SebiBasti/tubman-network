@@ -136,7 +136,7 @@ function Navbar() {
                   aria-expanded={openActivities ? 'true' : undefined}
                   onClick={handleActivitiesClick}
                 >
-                  Activities
+                  {t("navbar.activities.header")}
                 </Button>
                 <Menu
                   id="activities-menu"
