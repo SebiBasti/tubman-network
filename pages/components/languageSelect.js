@@ -9,7 +9,9 @@ import ListItem from "@mui/material/ListItem";
 import ListSubheader from "@mui/material/ListSubheader";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import Link from "next/link";
-import {router} from "next/client";
+import { useRouter } from "next/router";
+
+const router = useRouter();
 
 const LanguageSelect = () => {
   const languageMap = {
