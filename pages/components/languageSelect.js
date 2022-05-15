@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {useTranslation} from "next-i18next";
 import i18next from "i18next"
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
@@ -30,10 +30,13 @@ const LanguageSelect = () => {
 
   const { t } = useTranslation('common');
 
+  useEffect(() => {
+    router.push(`/${selected}/${router.pathname}`);
+  },[])
+
   const [menuAnchor, setMenuAnchor] = React.useState(null);
-  React.useEffect(() => {
+  useEffect(() => {
     document.body.dir = languageMap[selected].dir;
-    router.push(`/${selected}`);
   }, [menuAnchor, selected]);
 
   return (
