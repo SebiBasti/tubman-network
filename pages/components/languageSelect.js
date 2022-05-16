@@ -31,7 +31,7 @@ const LanguageSelect = () => {
   const { t } = useTranslation('common')
 
   useEffect(() => {
-    router.push(`/${selected}/${router.pathname}`);
+    router.push(`/${selected}${router.pathname}`);
   },[])
 
   const [menuAnchor, setMenuAnchor] = React.useState(null);
